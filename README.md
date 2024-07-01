@@ -1,1 +1,1 @@
-solve problem LeetCode with nmtun
+solve LeetCode problem with nmtun
