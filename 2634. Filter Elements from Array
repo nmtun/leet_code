@@ -1,0 +1,23 @@
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var filter = function(arr, fn) {
+    var newArray = [];
+    for(var i=0; i<arr.length; i++){
+        if(fn(arr[i],i)){
+            newArray.push(arr[i]);
+        }
+    }
+    return newArray;
+};
+
+var ex1 = filter([0,10,20,30], fn = function greaterThan10(n) { return n > 10; });
+console.log(ex1);
+
+var ex2 = filter([1,2,3], fn = function firstIndex(n, i) { return i === 0; });
+console.log(ex2);
+
+var ex3 = filter([-2,-1,0,1,2], fn = function plusOne(n) { return n + 1 });
+console.log(ex3);
